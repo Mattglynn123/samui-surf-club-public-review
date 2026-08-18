@@ -117,13 +117,15 @@ main figure>figcaption{box-sizing:border-box;display:flex;width:100%;min-height:
 .first-contact-topic-hero .topic-hero__inner{grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:3rem}.first-contact-topic-hero .first-contact-hero-logo{justify-self:end;width:240px;max-width:100%;margin-right:0}.first-contact-layout{align-items:start}.first-contact-layout>.partner-panel,.first-contact-layout>.sponsor-side-photo{align-self:start;margin-top:0}
 @media(max-width:760px){.first-contact-topic-hero .topic-hero__inner{grid-template-columns:1fr}.first-contact-topic-hero .first-contact-hero-logo{justify-self:end;width:210px}}
 .new-leaf-topic-hero .topic-hero__inner,.rising-phoenix-topic-hero .topic-hero__inner{grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:3rem}.new-leaf-topic-hero .new-leaf-hero-logo,.rising-phoenix-topic-hero .rising-phoenix-hero-logo{justify-self:end;width:240px;max-width:100%;margin-right:0}.new-leaf-layout,.bloom-layout,.rising-phoenix-layout,.life-saving-layout{align-items:start}.new-leaf-layout>*:last-child,.bloom-layout>*:last-child,.rising-phoenix-layout>*:last-child,.life-saving-layout>*:last-child{align-self:start;margin-top:0}.rising-phoenix-layout{grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr)}.rising-phoenix-layout .rising-phoenix-gallery{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;margin-top:0}
-@media(max-width:760px){.new-leaf-topic-hero .topic-hero__inner,.rising-phoenix-topic-hero .topic-hero__inner{grid-template-columns:1fr}.new-leaf-topic-hero .new-leaf-hero-logo,.rising-phoenix-topic-hero .rising-phoenix-hero-logo{justify-self:end;width:210px}.rising-phoenix-layout .rising-phoenix-gallery{grid-template-columns:1fr}}
+@media(max-width:760px){.new-leaf-topic-hero .topic-hero__inner,.rising-phoenix-topic-hero .topic-hero__inner{grid-template-columns:1fr}.new-leaf-topic-hero .new-leaf-hero-logo,.rising-phoenix-topic-hero .rising-phoenix-hero-logo{justify-self:end;width:210px}.rising-phoenix-layout{grid-template-columns:minmax(0,1fr)}.rising-phoenix-layout .rising-phoenix-gallery{grid-template-columns:1fr}}
 .media-grid.venue-gallery>figure{display:block!important;width:100%;height:340px;overflow:hidden;background:#eaf2f5!important}.media-grid.venue-gallery>figure>img{display:block;width:100%;height:340px!important;min-height:340px;max-height:340px;object-fit:cover!important;object-position:center!important}
 .media-grid.staff-photos.gallery-uniform>figure{display:grid!important;grid-template-rows:390px minmax(54px,auto)!important;height:100%;background:#fff!important}.media-grid.staff-photos.gallery-uniform>figure>img{display:block;width:100%;height:390px!important;min-height:390px;max-height:390px;object-fit:contain!important;object-position:center!important;background:#fff!important}.media-grid.staff-photos>figure>figcaption{justify-content:flex-start;padding-left:0;padding-right:0;text-align:left!important}
 @media(max-width:760px){.media-grid.venue-gallery>figure,.media-grid.venue-gallery>figure>img{height:300px!important;min-height:300px;max-height:300px}.media-grid.staff-photos.gallery-uniform>figure{grid-template-rows:320px minmax(54px,auto)!important}.media-grid.staff-photos.gallery-uniform>figure>img{height:320px!important;min-height:320px;max-height:320px}}
 .social-event-links .logo-card.photo-card{grid-template-rows:300px minmax(54px,auto)}.social-event-links .logo-card.photo-card>img{display:block;width:100%;height:300px!important;min-height:300px;max-height:300px;object-fit:cover!important;object-position:center!important}.social-event-links .logo-card.photo-card>span{justify-content:flex-start;padding-left:0;text-align:left}
 .media-grid.gallery-uniform.craft-market-gallery{grid-template-columns:repeat(2,minmax(0,430px));justify-content:center;width:min(100%,900px);margin-left:auto;margin-right:auto}.media-grid.gallery-uniform.craft-market-gallery>figure{display:grid;grid-template-rows:520px minmax(54px,auto);width:100%;height:100%;background:#fff!important}.media-grid.gallery-uniform.craft-market-gallery>figure>img{display:block;width:100%;height:520px!important;min-height:520px;max-height:520px;object-fit:contain!important;object-position:center!important;background:#fff!important}.media-grid.gallery-uniform.craft-market-gallery>figure>figcaption{justify-content:flex-start;padding-left:0;text-align:left!important}
 @media(max-width:760px){.social-event-links .logo-card.photo-card{grid-template-rows:260px minmax(54px,auto)}.social-event-links .logo-card.photo-card>img{height:260px!important;min-height:260px;max-height:260px}.media-grid.gallery-uniform.craft-market-gallery{grid-template-columns:minmax(0,520px)}.media-grid.gallery-uniform.craft-market-gallery>figure{grid-template-rows:440px minmax(54px,auto)}.media-grid.gallery-uniform.craft-market-gallery>figure>img{height:440px!important;min-height:440px;max-height:440px}}
+.story-grid.beach-party-flyers>figure{display:grid;grid-template-rows:816px minmax(54px,auto);align-items:start}.story-grid.beach-party-flyers>figure>img{display:block;width:100%;height:816px!important;min-height:816px;max-height:816px;object-fit:contain!important;object-position:center;background:#fff}.story-grid.beach-party-flyers>figure>figcaption{justify-content:flex-start;padding-left:0;text-align:left!important}
+@media(max-width:760px){.story-grid.beach-party-flyers>figure{grid-template-rows:560px minmax(54px,auto)}.story-grid.beach-party-flyers>figure>img{height:560px!important;min-height:560px;max-height:560px}}
 .volunteer-gary-page figure>figcaption,.volunteer-tony-page figure>figcaption,.volunteer-gallery>figure>figcaption,.media-grid.craft-market-gallery>figure>figcaption,.media-grid.anzac-gallery>figure>figcaption,.media-grid.paint-sip-gallery>figure>figcaption{justify-content:flex-start!important;padding-left:0!important;text-align:left!important}.media-grid.paint-sip-gallery>figure{display:grid!important;grid-template-rows:340px minmax(54px,auto)!important}.media-grid.paint-sip-gallery>figure>img{display:block;width:100%;height:340px!important;min-height:340px;max-height:340px;object-fit:cover!important;object-position:center!important}
 @media(max-width:760px){.media-grid.paint-sip-gallery>figure{grid-template-rows:300px minmax(54px,auto)!important}.media-grid.paint-sip-gallery>figure>img{height:300px!important;min-height:300px;max-height:300px}}
 .lick-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:1rem}.lick-photo-grid>.media-card{display:block;width:100%;padding:0}.media-grid.lick-photo-grid>.media-card>img{display:block;width:100%;height:280px!important;min-height:280px;max-height:280px;object-fit:cover!important;object-position:center!important}
@@ -203,6 +205,140 @@ main figure>figcaption{
     padding-left:0!important;
     padding-right:0!important;
   }
+}
+
+/* Visible-photo alignment and orientation rows. */
+body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait{
+  display:grid!important;
+  grid-template-rows:520px minmax(54px,auto)!important;
+  align-items:start!important;
+}
+body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>img{
+  width:293px!important;
+  height:520px!important;
+  min-height:520px;
+  max-height:520px;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>figcaption{
+  width:293px!important;
+}
+main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned{
+  align-items:flex-start!important;
+  grid-column:1 / -1;
+  justify-self:start;
+  width:191px!important;
+}
+main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned>img{
+  width:191px!important;
+  height:340px!important;
+  min-height:340px;
+  max-height:340px;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned>figcaption{
+  width:191px!important;
+}
+.media-grid.gallery-uniform.anzac-gallery{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  align-items:start;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure{
+  grid-template-rows:auto minmax(72px,auto)!important;
+  align-items:start!important;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--standard,
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--wide{
+  grid-column:span 3;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--portrait{
+  grid-column:span 2;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--standard>img{
+  width:100%!important;
+  height:auto!important;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:4/3;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--wide>img{
+  width:100%!important;
+  height:auto!important;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:16/9;
+}
+.media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--portrait>img{
+  width:100%!important;
+  height:auto!important;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:3/4;
+}
+@media(max-width:1050px){
+  .media-grid.gallery-uniform.anzac-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--standard,
+  .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--wide,
+  .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--portrait{grid-column:auto}
+}
+@media(max-width:760px){
+  .media-grid.gallery-uniform.anzac-gallery{grid-template-columns:minmax(0,1fr)!important}
+  body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>img,
+  body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>figcaption{max-width:100%!important}
+}
+
+/* Final orientation-aware gallery corrections. */
+.volunteer-tony-page .tony-photo--portrait>img,
+.tom-gallery .tom-photo--portrait-captioned>img,
+.volunteer-gary-page main .volunteer-profile>figure>img,
+.volunteer-gary-page main .gary-supporting-photos>figure>img,
+.media-grid.anzac-gallery>figure>img{
+  object-fit:contain!important;
+  object-position:left center!important;
+  background:#fff!important;
+}
+.volunteer-tony-page .tony-photo--portrait>figcaption,
+.tom-gallery .tom-photo--portrait-captioned>figcaption,
+.volunteer-gary-page main figure>figcaption,
+.media-grid.anzac-gallery>figure>figcaption{
+  width:100%!important;
+  justify-content:flex-start!important;
+  padding-left:0!important;
+  text-align:left!important;
+}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-equal>img{
+  object-fit:cover!important;
+  background:var(--soft)!important;
+}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-one>img{object-position:center 67%!important}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-two>img{object-position:center 50%!important}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-three>img{object-position:center 55%!important}
+.media-grid.anzac-gallery{
+  align-items:stretch;
+}
+.media-grid.anzac-gallery>figure{
+  display:grid!important;
+  grid-template-rows:340px minmax(72px,auto)!important;
+  height:100%;
+  align-items:start;
+  background:#fff!important;
+}
+.media-grid.anzac-gallery>figure>img{
+  display:block;
+  width:100%;
+  height:340px!important;
+  min-height:340px;
+  max-height:340px;
+}
+.media-grid.anzac-gallery>figure>figcaption{
+  min-height:72px;
+  padding:.7rem 0!important;
+}
+@media(max-width:760px){
+  .media-grid.anzac-gallery>figure{grid-template-rows:300px minmax(72px,auto)!important}
+  .media-grid.anzac-gallery>figure>img{height:300px!important;min-height:300px;max-height:300px}
 }
 
 /* Page-level gallery frames: consistent rows without losing important subjects. */
