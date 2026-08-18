@@ -131,3 +131,76 @@ main figure>figcaption{box-sizing:border-box;display:flex;width:100%;min-height:
 @media(max-width:760px){.lick-photo-grid{grid-template-columns:1fr}.media-grid.lick-photo-grid>.media-card>img{height:260px!important;min-height:260px;max-height:260px}}
 .media-grid.kids-gallery{align-items:stretch;justify-content:start}.media-grid.kids-gallery>figure{display:grid!important;width:100%;grid-template-rows:420px minmax(54px,auto)!important;align-items:start;background:#fff!important}.media-grid.kids-gallery>figure>img{display:block;width:100%;height:420px!important;min-height:420px;max-height:420px;object-fit:contain!important;object-position:center!important;background:#fff!important}.media-grid.kids-gallery>figure>figcaption{width:100%;justify-content:flex-start!important;padding-left:0!important;text-align:left!important}
 @media(max-width:760px){.media-grid.kids-gallery>figure{grid-template-rows:390px minmax(54px,auto)!important}.media-grid.kids-gallery>figure>img{height:390px!important;min-height:390px;max-height:390px}}
+
+/* Final gallery consistency: equal frames, complete photos and captions aligned to the left edge. */
+main .media-grid>figure>img,
+main .media-grid>.media-card>img,
+main .gallery-uniform>figure>img,
+main .volunteer-profile>figure>img,
+main .social-event-links .logo-card.photo-card>img{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+main .media-grid.sunday-sessions-gallery>figure>img,
+main .media-grid.gary-supporting-photos>figure>img,
+main .media-grid.paint-sip-gallery>figure>img,
+main .media-grid.lick-photo-grid>.media-card>img,
+main .media-grid.venue-gallery>figure>img,
+.pub-quiz-gallery>figure>img,
+.volunteer-gary-page main .volunteer-profile>figure>img,
+body.portrait-wide-page main .volunteer-profile>figure>img{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+.pub-quiz-gallery>figure{
+  grid-template-rows:340px!important;
+}
+@media(max-width:760px){.pub-quiz-gallery>figure{grid-template-rows:300px!important}}
+main figure>figcaption{
+  box-sizing:border-box!important;
+  display:flex!important;
+  width:100%!important;
+  align-self:stretch!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  margin:0!important;
+  padding:.65rem 0!important;
+  text-align:left!important;
+}
+
+@media(max-width:760px){
+  main .media-grid,
+  main .media-grid.kids-gallery,
+  main .media-grid.staff-photos,
+  main .media-grid.sunday-sessions-gallery,
+  main .media-grid.gary-supporting-photos,
+  main .media-grid.lick-photo-grid,
+  main .media-grid.rising-phoenix-gallery,
+  main .media-grid.craft-market-gallery,
+  main .social-event-links{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  main .media-grid>figure,
+  main .media-grid>.media-card{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  main .media-grid>figure>img,
+  main .media-grid>.media-card>img{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+  main figure>figcaption{
+    width:100%!important;
+    min-width:0!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+}
