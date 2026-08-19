@@ -207,6 +207,184 @@ main figure>figcaption{
   }
 }
 
+/* 2026-08-19 final gallery geometry: equal rows, full subjects, aligned captions. */
+.topic-hero__inner>div:only-child{grid-column:1/-1}
+
+.media-grid.staff-photos.gallery-uniform{
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  justify-content:start;
+  align-items:start;
+}
+.media-grid.staff-photos.gallery-uniform>figure{
+  display:grid!important;
+  justify-self:start;
+  align-self:start;
+  grid-template-rows:auto minmax(54px,auto)!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait{
+  grid-column:span 2;
+  width:min(100%,338px)!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{
+  grid-column:span 3;
+  width:100%!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait>img,
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape>img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left top!important;
+  background:transparent!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait>img{aspect-ratio:9/16}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape>img{aspect-ratio:16/9}
+.media-grid.staff-photos.gallery-uniform>figure>figcaption,
+.media-grid.kids-gallery>figure>figcaption,
+.media-grid.sunday-sessions-gallery>figure>figcaption,
+.media-grid.paint-sip-gallery>figure>figcaption,
+.media-grid.beach-party-gallery>figure>figcaption,
+.media-grid.pub-quiz-gallery>figure>figcaption{
+  box-sizing:border-box;
+  display:flex!important;
+  width:100%!important;
+  min-height:54px;
+  justify-content:flex-start!important;
+  align-items:flex-start;
+  padding:.65rem 0!important;
+  text-align:left!important;
+}
+
+.media-grid.kids-gallery{
+  grid-template-columns:repeat(20,minmax(0,1fr))!important;
+  justify-content:start;
+  align-items:start;
+}
+.media-grid.kids-gallery>figure{
+  display:grid!important;
+  width:100%!important;
+  justify-self:start;
+  align-self:start;
+  grid-template-rows:auto minmax(54px,auto)!important;
+}
+.media-grid.kids-gallery>figure.kids-photo--tall{grid-column:span 4}
+.media-grid.kids-gallery>figure.kids-photo--standard{grid-column:span 5}
+.media-grid.kids-gallery>figure.kids-photo--phone-tall{grid-column:span 4}
+.media-grid.kids-gallery>figure.kids-row-start{grid-column-start:1!important}
+.media-grid.kids-gallery>figure>img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left top!important;
+  background:transparent!important;
+}
+.media-grid.kids-gallery>figure.kids-photo--tall>img{aspect-ratio:9/16}
+.media-grid.kids-gallery>figure.kids-photo--standard>img{aspect-ratio:3/4}
+.media-grid.kids-gallery>figure.kids-photo--phone-tall>img{aspect-ratio:640/1432}
+
+.media-grid.sunday-sessions-gallery>figure,
+.media-grid.paint-sip-gallery>figure,
+.media-grid.pub-quiz-gallery>figure{
+  display:grid!important;
+  width:100%!important;
+  align-self:start;
+  grid-template-rows:auto minmax(72px,auto)!important;
+}
+.media-grid.sunday-sessions-gallery>figure>img,
+.media-grid.paint-sip-gallery>figure>img,
+.media-grid.pub-quiz-gallery>figure>img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:16/9;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-one>img{object-position:center 67%!important}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-two>img{object-position:center 50%!important}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--top-three>img{object-position:center 55%!important}
+.media-grid.sunday-sessions-gallery>figure.sunday-photo--portrait-focus>img{object-position:center 57%!important}
+
+.media-grid.beach-party-gallery{
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  justify-content:start;
+  align-items:start;
+}
+.media-grid.beach-party-gallery>figure{
+  display:grid!important;
+  justify-self:start;
+  align-self:start;
+  grid-template-rows:auto minmax(54px,auto)!important;
+}
+.media-grid.beach-party-gallery>figure.beach-photo--landscape{
+  grid-column:span 2;
+  width:100%!important;
+}
+.media-grid.beach-party-gallery>figure.beach-photo--portrait{
+  grid-column:span 3;
+  width:min(100%,405px)!important;
+}
+.media-grid.beach-party-gallery>figure>img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left top!important;
+  background:transparent!important;
+}
+.media-grid.beach-party-gallery>figure.beach-photo--landscape>img{aspect-ratio:16/9}
+.media-grid.beach-party-gallery>figure.beach-photo--portrait>img{aspect-ratio:3/4}
+
+@media(max-width:1050px){
+  .media-grid.staff-photos.gallery-uniform,
+  .media-grid.beach-party-gallery{
+    width:100%!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape,
+  .media-grid.beach-party-gallery>figure.beach-photo--landscape,
+  .media-grid.beach-party-gallery>figure.beach-photo--portrait{grid-column:auto}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  .media-grid.beach-party-gallery>figure.beach-photo--portrait{width:min(100%,360px)!important}
+}
+
+@media(max-width:760px){
+  .media-grid.staff-photos.gallery-uniform,
+  .media-grid.kids-gallery,
+  .media-grid.beach-party-gallery{
+    grid-template-columns:minmax(0,1fr)!important;
+    justify-items:start!important;
+  }
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape,
+  .media-grid.kids-gallery>figure,
+  .media-grid.beach-party-gallery>figure.beach-photo--landscape,
+  .media-grid.beach-party-gallery>figure.beach-photo--portrait{
+    grid-column:1!important;
+    grid-column-start:1!important;
+  }
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait{width:min(100%,338px)!important}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{width:100%!important}
+  .media-grid.kids-gallery>figure.kids-photo--tall{width:min(100%,320px)!important}
+  .media-grid.kids-gallery>figure.kids-photo--standard{width:min(100%,360px)!important}
+  .media-grid.kids-gallery>figure.kids-photo--phone-tall{width:min(100%,286px)!important}
+  .media-grid.beach-party-gallery>figure.beach-photo--landscape{width:100%!important}
+  .media-grid.beach-party-gallery>figure.beach-photo--portrait{width:min(100%,360px)!important}
+}
+
 /* Visible-photo alignment and orientation rows. */
 body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait{
   display:grid!important;
@@ -479,5 +657,80 @@ main .whats-on-program-grid>.media-card>img{
     height:300px!important;
     min-height:300px;
     max-height:300px;
+  }
+}
+
+/* Staff override must remain last because legacy frame rules above use fixed heights. */
+.media-grid.staff-photos.gallery-uniform{
+  width:100%!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure{
+  grid-template-rows:auto minmax(54px,auto)!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait{
+  grid-column:span 2;
+  width:min(100%,338px)!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{
+  grid-column:span 3;
+  width:100%!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait>img,
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape>img{
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left top!important;
+  background:transparent!important;
+}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait>img{aspect-ratio:9/16}
+.media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape>img{aspect-ratio:16/9}
+@media(max-width:1050px){
+  .media-grid.staff-photos.gallery-uniform{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{grid-column:auto}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait{width:min(100%,360px)!important}
+}
+@media(max-width:760px){
+  .media-grid.staff-photos.gallery-uniform{grid-template-columns:minmax(0,1fr)!important}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{grid-column:1!important}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait{width:min(100%,338px)!important}
+  .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{width:100%!important}
+}
+
+/* Preserve intended spans when an orientation group begins a fresh row. */
+.media-grid.kids-gallery>figure.kids-photo--tall.kids-row-start{grid-column:1 / span 4!important}
+.media-grid.kids-gallery>figure.kids-photo--standard.kids-row-start{grid-column:1 / span 5!important}
+.media-grid.kids-gallery>figure.kids-photo--phone-tall.kids-row-start{grid-column:1 / span 4!important}
+
+/* Sunday-session rows use one responsive 16:9 frame at every breakpoint. */
+.media-grid.sunday-sessions-gallery>figure>img{
+  height:225px!important;
+  min-height:225px!important;
+  max-height:225px!important;
+}
+@media(max-width:1050px){
+  .media-grid.sunday-sessions-gallery>figure>img{
+    height:calc((100vw - 48px)*.28125)!important;
+    min-height:calc((100vw - 48px)*.28125)!important;
+    max-height:calc((100vw - 48px)*.28125)!important;
+  }
+}
+@media(max-width:760px){
+  .media-grid.kids-gallery>figure.kids-photo--tall,
+  .media-grid.kids-gallery>figure.kids-photo--standard,
+  .media-grid.kids-gallery>figure.kids-photo--phone-tall{grid-column:1!important}
+  .media-grid.sunday-sessions-gallery>figure>img{
+    height:calc((100vw - 32px)*.5625)!important;
+    min-height:calc((100vw - 32px)*.5625)!important;
+    max-height:calc((100vw - 32px)*.5625)!important;
   }
 }
