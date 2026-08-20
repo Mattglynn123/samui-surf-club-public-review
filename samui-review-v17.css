@@ -79,6 +79,9 @@ body:has(.brick-box) .split{align-items:start}body:has(.brick-box) .split>img{al
 .logo-card img{width:min(210px,100%);height:120px;object-fit:contain!important;object-position:center;background:transparent!important}.logo-card.photo-card{display:grid;grid-template-rows:250px minmax(32px,auto);align-items:start;justify-content:stretch}.logo-card.photo-card img,.logo-card.photo-card img.main-thumb-cover{width:100%;height:250px!important;max-height:250px;object-fit:contain!important;object-position:center center;background:#fff!important}.logo-card.photo-card span{align-self:start;width:100%;text-align:center}
 .community-partner-grid{grid-template-columns:repeat(auto-fit,minmax(180px,260px))!important;justify-content:start}
 @media(max-width:760px){.community-partner-grid{grid-template-columns:1fr!important}}
+.bangrak-tavern-topic-hero .topic-hero__inner{grid-template-columns:minmax(0,1fr) minmax(300px,430px);gap:3rem}
+.bangrak-tavern-topic-hero .bangrak-tavern-hero-logo{box-sizing:border-box;justify-self:end;width:min(100%,420px);height:auto;max-height:240px;padding:.55rem;object-fit:contain!important;background:#fff!important;border:4px solid #fff;box-shadow:0 12px 28px rgb(0 0 0 / 18%)}
+@media(max-width:760px){.bangrak-tavern-topic-hero .topic-hero__inner{grid-template-columns:1fr}.bangrak-tavern-topic-hero .bangrak-tavern-hero-logo{display:none}}
 .volunteers-page .logo-card.photo-card{grid-template-rows:280px minmax(32px,auto)}.volunteers-page .logo-card.photo-card img,.volunteers-page .logo-card.photo-card img.main-thumb-cover{height:280px!important;max-height:280px;object-fit:cover!important;object-position:center top!important;background:transparent!important}.volunteers-page .content-section:last-of-type>.yellow-note{display:flex;width:max-content;max-width:100%;margin:2.5rem auto 0;text-align:center}
 .sponsor-return-row{width:min(calc(100% - 2rem),1360px);margin:1.5rem auto 1rem;display:flex;justify-content:flex-end}.sponsor-return-row .yellow-note{margin-top:0}main:has(> .sponsor-return-row){display:flex;flex-direction:column}main:has(> .sponsor-return-row)> .page-hero,main:has(> .sponsor-return-row)> .topic-hero{order:-2}main:has(> .sponsor-return-row)> .sponsor-return-row{order:-1}.partner-panel,.brick-box{padding:1.35rem;background:#fff;border-top:8px solid var(--yellow);box-shadow:var(--shadow)}.partner-panel p{color:var(--muted)}.brick-box{padding:clamp(1.5rem,3vw,2.35rem);background:#fff;border:5px solid var(--red);outline:4px solid var(--yellow);outline-offset:-10px;color:var(--navy)}.brick-box .kicker,.brick-box h2,.brick-box h3,.brick-box p,.brick-box strong,.brick-box a{color:var(--navy)}.brick-box p{font-size:1.13rem;line-height:1.65}.brick-box h2{font-size:clamp(1.8rem,3vw,2.55rem);color:var(--red)}.brick-box h3{font-size:1.3rem}.brick-box a{text-decoration-thickness:2px;text-underline-offset:4px}.amount{display:inline-flex;margin:.4rem 0 1rem;padding:.9rem 1.1rem;background:var(--yellow);color:var(--navy)!important;border:4px solid var(--red);font-size:1.18rem!important;font-weight:950;text-transform:uppercase}.content-section:has(.history-milestones) .copy-block>h2:not(:first-child){margin-top:2.25rem;margin-bottom:1.6rem}.history-story-layout .copy-block>h2:not(:first-child){margin-top:3.25rem;margin-bottom:1.75rem}
 .gallery-return-row{width:min(calc(100% - 2rem),1360px);margin:1.5rem auto 1rem;display:flex;justify-content:flex-end}.gallery-return-row .yellow-note{margin-top:0}
@@ -734,5 +737,153 @@ main .whats-on-program-grid>.media-card>img{
     height:calc((100vw - 32px)*.5625)!important;
     min-height:calc((100vw - 32px)*.5625)!important;
     max-height:calc((100vw - 32px)*.5625)!important;
+  }
+}
+
+/* 2026-08-20 mobile QA: uniform, uncropped gallery frames and left-aligned labels. */
+@media(max-width:760px){
+  main .logo-card.photo-card>span,
+  .volunteers-page main .logo-card.photo-card>span{
+    box-sizing:border-box!important;
+    width:100%!important;
+    justify-content:flex-start!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    text-align:left!important;
+  }
+
+  .volunteers-page main .logo-card.photo-card>img,
+  main .social-event-links .logo-card.photo-card>img{
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape,
+  main .media-grid.kids-gallery>figure.kids-photo--tall,
+  main .media-grid.kids-gallery>figure.kids-photo--standard,
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall,
+  main .media-grid.beach-party-gallery>figure.beach-photo--landscape,
+  main .media-grid.beach-party-gallery>figure.beach-photo--portrait{
+    width:100%!important;
+    max-width:none!important;
+  }
+  main .media-grid.kids-gallery>figure.kids-photo--tall.kids-row-start,
+  main .media-grid.kids-gallery>figure.kids-photo--standard.kids-row-start,
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall.kids-row-start{
+    grid-column:1!important;
+    grid-column-start:1!important;
+  }
+
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait,
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape{
+    grid-template-rows:360px minmax(54px,auto)!important;
+  }
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--portrait>img,
+  main .media-grid.staff-photos.gallery-uniform>figure.staff-photo--landscape>img{
+    width:100%!important;
+    height:360px!important;
+    min-height:360px!important;
+    max-height:360px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+
+  main .media-grid.kids-gallery>figure{
+    grid-template-rows:420px minmax(54px,auto)!important;
+  }
+  main .media-grid.kids-gallery>figure>img{
+    width:100%!important;
+    height:420px!important;
+    min-height:420px!important;
+    max-height:420px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+  main .media-grid.kids-gallery>figure.kids-photo--tall>img,
+  main .media-grid.kids-gallery>figure.kids-photo--standard>img,
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall>img{
+    width:100%!important;
+    max-width:none!important;
+    aspect-ratio:auto!important;
+  }
+
+  main .media-grid.sunday-sessions-gallery>figure>img,
+  main .media-grid.sunday-sessions-gallery>figure.sunday-photo--top-equal>img,
+  main .media-grid.sunday-sessions-gallery>figure.sunday-photo--portrait-focus>img,
+  main .media-grid.pub-quiz-gallery>figure>img{
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+
+  main .media-grid.beach-party-gallery>figure.beach-photo--landscape,
+  main .media-grid.beach-party-gallery>figure.beach-photo--portrait,
+  main .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--standard,
+  main .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--wide,
+  main .media-grid.gallery-uniform.anzac-gallery>figure.anzac-photo--portrait{
+    grid-template-rows:360px minmax(72px,auto)!important;
+  }
+  main .media-grid.beach-party-gallery>figure>img,
+  main .media-grid.gallery-uniform.anzac-gallery>figure>img{
+    display:block!important;
+    width:100%!important;
+    height:360px!important;
+    min-height:360px!important;
+    max-height:360px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+
+  main .media-grid.volunteer-gallery>figure,
+  body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait,
+  main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned{
+    width:100%!important;
+    max-width:none!important;
+    grid-template-rows:360px minmax(54px,auto)!important;
+  }
+  main .media-grid.volunteer-gallery>figure>img,
+  body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>img,
+  main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned>img{
+    width:100%!important;
+    height:360px!important;
+    min-height:360px!important;
+    max-height:360px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
+  }
+  body.volunteer-tony-page main .media-grid.volunteer-gallery>figure.tony-photo--portrait>figcaption,
+  main .media-grid.tom-gallery>figure.tom-photo--portrait-captioned>figcaption{
+    width:100%!important;
+  }
+
+  main .volunteer-profile>figure,
+  .volunteer-gary-page main .volunteer-profile>figure{
+    width:100%!important;
+    max-width:none!important;
+    min-height:360px!important;
+    grid-template-rows:360px auto!important;
+  }
+  main .volunteer-profile>figure>img,
+  body.portrait-wide-page main .volunteer-profile>figure>img,
+  .volunteer-gary-page main .volunteer-profile>figure>img{
+    width:100%!important;
+    max-width:none!important;
+    height:360px!important;
+    min-height:360px!important;
+    max-height:360px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    background:#fff!important;
   }
 }
