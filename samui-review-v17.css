@@ -34,6 +34,7 @@ p{margin:0 0 1rem}.lead{font-size:1.1rem;color:var(--muted)}
 .page-hero{padding:1rem max(1rem,calc((100vw - 1360px)/2));display:grid;grid-template-columns:minmax(0,1fr);gap:.35rem}.page-hero.compact{padding-top:.85rem;padding-bottom:.85rem}.page-hero>div{max-width:none}.page-hero p{max-width:980px;margin-bottom:.25rem;color:#fff;font-size:1rem}.page-hero.volunteers-hero h1{white-space:nowrap}
 .page-hero.compact.history-hero{padding-top:.85rem;padding-bottom:.85rem}.page-hero.history-hero h1{font-size:clamp(1.8rem,3.2vw,3rem)}.content-section:has(.history-milestones) h2{font-size:2rem}
 .history-milestones{display:grid;grid-template-columns:repeat(2,minmax(0,580px));gap:clamp(1.2rem,3vw,2rem);align-items:start;justify-content:start;margin:2rem 0}.history-milestones figure,.history-leaderboard{width:100%;max-width:580px;margin:0;justify-self:start}.history-milestones img{display:block;width:100%;height:auto;object-fit:contain!important;object-position:center;border:0;box-shadow:none}.history-milestones figcaption{margin:0;padding:.25rem 0 0;color:var(--navy);font-weight:800}.kids-page-hero .topic-hero__inner{grid-template-columns:minmax(0,1fr) minmax(240px,380px)}.kids-page-hero img{width:100%;height:220px;max-height:220px;object-fit:cover!important;object-position:center 34%}.section-intro{margin:0 0 1.4rem;padding:.85rem 1rem;border-left:7px solid var(--red);background:var(--soft);color:var(--navy)}
+@media(max-width:760px){.kids-page-hero .topic-hero__inner{grid-template-columns:1fr}.kids-page-hero img{width:100%;height:220px;max-height:220px}}
 .event-grid .media-card img,.event-grid img{width:100%;height:360px!important;object-fit:contain!important;object-position:center;background:#fff!important}.staff-grid img,.staff-photos img{width:100%;height:320px!important;object-fit:cover!important;object-position:center}
 .event-grid{align-items:stretch}.event-grid .media-card{display:grid;grid-template-rows:360px 1fr;height:100%}.event-grid .media-card>div{display:flex;flex-direction:column;height:100%}.event-grid .media-card .text-link{margin-top:auto;align-self:flex-start}
 main:has(.card-grid a[href="samui-cpr-water-safety-course-review-v17.html"])>.content-section:first-of-type .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}main:has(.card-grid a[href="samui-cpr-water-safety-course-review-v17.html"])>.content-section:first-of-type .media-card{display:grid;grid-template-rows:360px 1fr;height:100%}main:has(.card-grid a[href="samui-cpr-water-safety-course-review-v17.html"])>.content-section:first-of-type .media-card img{width:100%;height:360px!important;object-fit:cover!important}main:has(.card-grid a[href="samui-cpr-water-safety-course-review-v17.html"])>.content-section:first-of-type .media-card>div{display:flex;flex-direction:column;height:100%}main:has(.card-grid a[href="samui-cpr-water-safety-course-review-v17.html"])>.content-section:first-of-type .media-card .text-link{margin-top:auto;align-self:flex-start}
@@ -715,6 +716,11 @@ main .whats-on-program-grid>.media-card>img{
 .media-grid.kids-gallery>figure.kids-photo--tall.kids-row-start{grid-column:1 / span 4!important}
 .media-grid.kids-gallery>figure.kids-photo--standard.kids-row-start{grid-column:1 / span 5!important}
 .media-grid.kids-gallery>figure.kids-photo--phone-tall.kids-row-start{grid-column:1 / span 4!important}
+
+/* Keep the first ten portrait cards at five per row, then fill every remaining
+   desktop row with four evenly sized cards instead of leaving group gaps. */
+.media-grid.kids-gallery>figure:nth-child(n+11){grid-column:span 5!important}
+.media-grid.kids-gallery>figure.kids-row-start:nth-child(n+11){grid-column:span 5!important}
 
 /* Sunday-session rows use one responsive 16:9 frame at every breakpoint. */
 .media-grid.sunday-sessions-gallery>figure>img{
