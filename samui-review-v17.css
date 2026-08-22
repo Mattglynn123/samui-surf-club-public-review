@@ -214,6 +214,107 @@ main figure>figcaption{
   }
 }
 
+/* 2026-08-22 volunteer and caption repair pass. Equal frames must never crop
+   people; all labels stay anchored to the left edge of the image frame. */
+.volunteers-page main .logo-card.photo-card>img,
+.volunteers-page main .logo-card.photo-card>img.main-thumb-cover{
+  display:block!important;
+  width:100%!important;
+  height:280px!important;
+  min-height:280px!important;
+  max-height:280px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+body.volunteer-amy-page main .volunteer-profile{
+  align-items:start!important;
+}
+body.volunteer-amy-page main .volunteer-profile>figure,
+body.volunteer-amy-page main .volunteer-profile>.copy-block{
+  align-self:start!important;
+  margin-top:0!important;
+}
+body.volunteer-amy-page main .volunteer-profile>figure>img{
+  object-fit:contain!important;
+  object-position:center top!important;
+}
+
+body.volunteer-khun-kanok-page main .volunteer-profile>figure>img,
+body.volunteer-khun-kanok-page main .profile-gallery>figure>img{
+  object-fit:contain!important;
+  object-position:center top!important;
+}
+
+.volunteer-gary-page main .gary-supporting-photos{
+  box-sizing:border-box!important;
+  width:min(100%,1112px)!important;
+  grid-template-columns:repeat(3,minmax(0,360px))!important;
+  justify-content:center!important;
+  margin:2rem auto 0!important;
+  gap:1rem!important;
+}
+.volunteer-gary-page main .gary-supporting-photos>figure{
+  width:100%!important;
+  max-width:360px!important;
+}
+.volunteer-gary-page main .gary-supporting-photos>figure>img{
+  width:100%!important;
+  height:340px!important;
+  min-height:340px!important;
+  max-height:340px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+main .media-grid.kids-gallery>figure>figcaption{
+  display:flex!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  align-self:stretch!important;
+  justify-content:flex-start!important;
+  margin:0!important;
+  padding:.65rem 0!important;
+  text-align:left!important;
+}
+
+.whats-on-events-flyer{
+  width:min(100%,820px);
+  margin:2rem auto 0;
+}
+.whats-on-events-flyer>img{
+  display:block;
+  width:100%;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center top!important;
+  background:#fff!important;
+}
+
+@media(max-width:1050px){
+  .volunteer-gary-page main .gary-supporting-photos{
+    width:min(100%,736px)!important;
+    grid-template-columns:repeat(2,minmax(0,360px))!important;
+  }
+}
+
+@media(max-width:760px){
+  .volunteers-page main .logo-card.photo-card>img,
+  .volunteers-page main .logo-card.photo-card>img.main-thumb-cover{
+    height:260px!important;
+    min-height:260px!important;
+    max-height:260px!important;
+  }
+  .volunteer-gary-page main .gary-supporting-photos{
+    width:min(100%,360px)!important;
+    grid-template-columns:minmax(0,360px)!important;
+  }
+}
+
 /* 2026-08-19 final gallery geometry: equal rows, full subjects, aligned captions. */
 .topic-hero__inner>div:only-child{grid-column:1/-1}
 
@@ -1040,6 +1141,25 @@ main .media-grid.kids-gallery>figure.kids-photo--phone-tall>img{
   object-position:center!important;
   background:#fff!important;
 }
+main .media-grid.kids-gallery>figure>figcaption{
+  box-sizing:border-box!important;
+  justify-self:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  justify-content:flex-start!important;
+  text-align:left!important;
+}
+main .media-grid.kids-gallery>figure.kids-photo--tall>figcaption{
+  width:min(100%,236.25px)!important;
+}
+main .media-grid.kids-gallery>figure.kids-photo--standard>figcaption{
+  width:min(100%,315px)!important;
+}
+main .media-grid.kids-gallery>figure.kids-photo--phone-tall>figcaption{
+  width:min(100%,187.71px)!important;
+}
 
 main .media-grid.sunday-sessions-gallery>figure:last-child,
 main .media-grid.sunday-sessions-gallery>figure:last-child>img{
@@ -1063,4 +1183,7 @@ main .media-grid.sunday-sessions-gallery>figure:last-child>img{
   main .media-grid.kids-gallery>figure.kids-photo--tall>img,
   main .media-grid.kids-gallery>figure.kids-photo--standard>img,
   main .media-grid.kids-gallery>figure.kids-photo--phone-tall>img{height:360px!important;min-height:360px!important;max-height:360px!important}
+  main .media-grid.kids-gallery>figure.kids-photo--tall>figcaption{width:min(100%,202.5px)!important}
+  main .media-grid.kids-gallery>figure.kids-photo--standard>figcaption{width:min(100%,270px)!important}
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall>figcaption{width:min(100%,160.89px)!important}
 }
