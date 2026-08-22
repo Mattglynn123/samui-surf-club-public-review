@@ -214,6 +214,43 @@ main figure>figcaption{
   }
 }
 
+/* Keep Tony's opening copy level with the top edge of his lead photo. */
+body.volunteer-tony-page main .volunteer-profile{
+  align-items:start!important;
+}
+body.volunteer-tony-page main .volunteer-profile>figure,
+body.volunteer-tony-page main .volunteer-profile>.copy-block{
+  align-self:start!important;
+  margin-top:0!important;
+}
+body.volunteer-tony-page main .volunteer-profile>.copy-block{
+  border-top:0!important;
+  padding-top:0!important;
+}
+body.volunteer-tony-page main .volunteer-profile>.copy-block>:first-child{
+  margin-top:0!important;
+}
+
+/* Keep both primary What's On cards equally filled and left aligned. */
+main .whats-on-program-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+}
+main .whats-on-program-grid>.media-card>img{
+  object-fit:cover!important;
+  object-position:center!important;
+}
+main .whats-on-program-grid>.media-card>div,
+main .whats-on-program-grid>.media-card>div>*{
+  text-align:left!important;
+}
+
+@media(max-width:760px){
+  main .whats-on-program-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
+
 /* 2026-08-22 final volunteer-card consistency pass. Every section uses the
    same card width and uncropped image frame, including Max & Ray, Khun Kanok
    and Amy. */
@@ -273,6 +310,55 @@ main figure>figcaption{
 @media(max-width:480px){
   .volunteers-page main .logo-grid{
     grid-template-columns:minmax(0,1fr)!important;
+  }
+}
+
+/* 2026-08-22 past-event flyer-only copy pass. */
+.past-events-page main .event-grid>.media-card{
+  display:grid!important;
+  grid-template-rows:360px minmax(44px,auto)!important;
+  align-items:start!important;
+  padding:0!important;
+}
+.past-events-page main .event-grid>.media-card>img{
+  display:block!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:360px!important;
+  min-height:360px!important;
+  max-height:360px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+.past-events-page main .event-grid>.media-card>.text-link{
+  box-sizing:border-box!important;
+  width:100%!important;
+  margin:.65rem 0 0!important;
+  padding:0!important;
+  text-align:left!important;
+  justify-self:start!important;
+}
+.past-events-page main .event-grid>.flyer-only-card{
+  grid-template-rows:360px!important;
+}
+main .media-grid.kids-gallery>figure.kids-photo--last,
+main .media-grid.kids-gallery>figure.kids-photo--last>img{
+  width:100%!important;
+  max-width:none!important;
+}
+
+@media(max-width:760px){
+  .past-events-page main .event-grid>.media-card{
+    grid-template-rows:320px minmax(44px,auto)!important;
+  }
+  .past-events-page main .event-grid>.media-card>img{
+    height:320px!important;
+    min-height:320px!important;
+    max-height:320px!important;
+  }
+  .past-events-page main .event-grid>.flyer-only-card{
+    grid-template-rows:320px!important;
   }
 }
 
