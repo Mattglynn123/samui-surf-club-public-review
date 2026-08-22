@@ -150,6 +150,7 @@ main .social-event-links .logo-card.photo-card>img{
   object-position:center!important;
   background:#fff!important;
 }
+
 main .media-grid.sunday-sessions-gallery>figure>img,
 main .media-grid.gary-supporting-photos>figure>img,
 main .media-grid.paint-sip-gallery>figure>img,
@@ -892,4 +893,174 @@ main .whats-on-program-grid>.media-card>img{
     object-position:center!important;
     background:#fff!important;
   }
+}
+
+/* 2026-08-22 final media guardrails: keep every subject visible and every
+   caption anchored to the exact left edge of its image on desktop and mobile. */
+main figure>figcaption,
+main .logo-card.photo-card>span,
+main .media-card>span{
+  display:flex!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:100%!important;
+  align-self:stretch!important;
+  justify-content:flex-start!important;
+  align-items:flex-start!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:0!important;
+  padding-right:0!important;
+  text-align:left!important;
+}
+
+body.volunteer-leon-page main .supporter-profile>figure{
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  background:#fff!important;
+}
+body.volunteer-leon-page main .supporter-profile>figure>img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+@media(max-width:760px){
+  body.volunteer-leon-page main .supporter-profile>figure,
+  body.volunteer-leon-page main .supporter-profile>figure>img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+}
+
+/* 2026-08-22 final layout consistency pass. */
+.page-section.split,
+.page-section>.split{
+  align-items:start!important;
+}
+.page-section.split>*:first-child,
+.page-section.split>*:last-child,
+.page-section>.split>*:first-child,
+.page-section>.split>*:last-child{
+  align-self:start!important;
+  margin-top:0!important;
+}
+
+.page-section:has(.sponsor-feature-photo)>.media-grid{
+  width:min(100%,900px)!important;
+  grid-template-columns:repeat(2,minmax(0,430px))!important;
+  justify-content:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.page-section:has(.sponsor-feature-photo)>.media-grid>.media-card{
+  display:grid!important;
+  width:100%!important;
+  grid-template-rows:360px!important;
+  padding:0!important;
+}
+.page-section:has(.sponsor-feature-photo)>.media-grid>.media-card>img{
+  display:block!important;
+  width:100%!important;
+  height:360px!important;
+  min-height:360px!important;
+  max-height:360px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+main .event-grid>.media-card{
+  display:grid!important;
+  grid-template-rows:360px auto!important;
+  align-items:start!important;
+}
+main .event-grid>.media-card>img{
+  display:block!important;
+  width:100%!important;
+  height:360px!important;
+  min-height:360px!important;
+  max-height:360px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+main .media-grid.kids-gallery{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+main .media-grid.kids-gallery>figure,
+main .media-grid.kids-gallery>figure.kids-photo--tall,
+main .media-grid.kids-gallery>figure.kids-photo--standard,
+main .media-grid.kids-gallery>figure.kids-photo--phone-tall,
+main .media-grid.kids-gallery>figure.kids-row-start,
+main .media-grid.kids-gallery>figure:nth-child(n+11){
+  grid-column:auto!important;
+  grid-column-start:auto!important;
+  grid-column-end:auto!important;
+  width:100%!important;
+  max-width:none!important;
+}
+main .media-grid.kids-gallery>figure.kids-photo--tall.kids-row-start,
+main .media-grid.kids-gallery>figure.kids-photo--standard.kids-row-start,
+main .media-grid.kids-gallery>figure.kids-photo--phone-tall.kids-row-start,
+main .media-grid.kids-gallery>figure.kids-row-start:nth-child(n+11){
+  grid-column:auto!important;
+  grid-column-start:auto!important;
+  grid-column-end:auto!important;
+}
+main .media-grid.kids-gallery>figure,
+main .media-grid.kids-gallery>figure.kids-photo--tall,
+main .media-grid.kids-gallery>figure.kids-photo--standard,
+main .media-grid.kids-gallery>figure.kids-photo--phone-tall{
+  grid-template-rows:420px minmax(54px,auto)!important;
+}
+main .media-grid.kids-gallery>figure>img,
+main .media-grid.kids-gallery>figure.kids-photo--tall>img,
+main .media-grid.kids-gallery>figure.kids-photo--standard>img,
+main .media-grid.kids-gallery>figure.kids-photo--phone-tall>img{
+  display:block!important;
+  width:100%!important;
+  height:420px!important;
+  min-height:420px!important;
+  max-height:420px!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#fff!important;
+}
+
+main .media-grid.sunday-sessions-gallery>figure:last-child,
+main .media-grid.sunday-sessions-gallery>figure:last-child>img{
+  width:100%!important;
+  max-width:none!important;
+}
+
+@media(max-width:1050px){
+  main .media-grid.kids-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:760px){
+  .page-section:has(.sponsor-feature-photo)>.media-grid{grid-template-columns:minmax(0,430px)!important}
+  main .event-grid>.media-card{grid-template-rows:320px auto!important}
+  main .event-grid>.media-card>img{height:320px!important;min-height:320px!important;max-height:320px!important}
+  main .media-grid.kids-gallery{grid-template-columns:minmax(0,1fr)!important}
+  main .media-grid.kids-gallery>figure,
+  main .media-grid.kids-gallery>figure.kids-photo--tall,
+  main .media-grid.kids-gallery>figure.kids-photo--standard,
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall{grid-template-rows:360px minmax(54px,auto)!important}
+  main .media-grid.kids-gallery>figure>img,
+  main .media-grid.kids-gallery>figure.kids-photo--tall>img,
+  main .media-grid.kids-gallery>figure.kids-photo--standard>img,
+  main .media-grid.kids-gallery>figure.kids-photo--phone-tall>img{height:360px!important;min-height:360px!important;max-height:360px!important}
 }
